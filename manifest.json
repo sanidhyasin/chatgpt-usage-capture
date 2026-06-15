@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "AI Chat Capture (ChatGPT) — in-browser usage demo",
+  "version": "0.1.0",
+  "description": "Observes ChatGPT's own network stream in-page and reconstructs a clean prompt/response/model record, live. Nothing leaves the machine.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Oximy AI"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+      "js": ["src/reassembler.js", "src/inject.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+      "js": ["src/content.js"],
+      "css": ["src/panel.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

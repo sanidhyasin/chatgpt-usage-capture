@@ -1,0 +1,7 @@
+data: {"message": {"id": "abc", "author": {"role": "assistant"}, "content": {"content_type": "text", "parts": ["Hello"]}, "metadata": {"model_slug": "gpt-4o"}}, "conversation_id": "c1"}
+
+data: {"message": {"id": "abc", "author": {"role": "assistant"}, "content": {"content_type": "text", "parts": ["Hello! How"]}, "metadata": {"model_slug": "gpt-4o"}}, "conversation_id": "c1"}
+
+data: {"message": {"id": "abc", "author": {"role": "assistant"}, "content": {"content_type": "text", "parts": ["Hello! How can I help?"]}, "metadata": {"model_slug": "gpt-4o"}, "end_turn": true}, "conversation_id": "c1"}
+
+data: [DONE]

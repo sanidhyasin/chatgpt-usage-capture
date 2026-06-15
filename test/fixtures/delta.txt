@@ -1,0 +1,13 @@
+data: {"v": {"message": {"id": "m2", "author": {"role": "assistant"}, "content": {"content_type": "text", "parts": [""]}, "metadata": {"model_slug": "gpt-5"}}, "conversation_id": "c2"}}
+
+data: {"p": "/message/content/parts/0", "o": "append", "v": "Hi"}
+
+data: {"v": " there"}
+
+data: {"v": ", how"}
+
+data: {"o": "patch", "v": [{"p": "/message/content/parts/0", "o": "append", "v": " are you?"}]}
+
+data: {"p": "/message/metadata/finish_details", "o": "add", "v": {"type": "stop"}}
+
+data: [DONE]
